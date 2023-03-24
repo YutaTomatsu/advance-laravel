@@ -26,10 +26,10 @@
   </tr>
   @foreach ($authors as $author)
   <tr>
-    <td>{$author->id}</td>
-    <td>{$author->name}</td>
-    <td>{$author->age}</td>
-    <td>{$author->nationality}</td>
+    <td>{{$author->id}}</td>
+    <td>{{$author->name}}</td>
+    <td>{{$author->age}}</td>
+    <td>{{$author->nationality}}</td>
   </tr>
   @endforeach
 </table>
