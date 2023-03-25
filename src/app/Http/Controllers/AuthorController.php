@@ -40,7 +40,7 @@ return view('author.binds', $data);
         return view('add');
     }
 
-    public function create(Request $request){
+    public function create(AuthorRequest $request){
         $form = $request->all();
         Author::create($form);
         return redirect('/');
@@ -51,7 +51,7 @@ return view('author.binds', $data);
         return view('edit', ['form' => $author]);
     }
 
-    public function update(Request $request)
+    public function update(AuthorRequest $request)
     {
         $form = $request->all();
         unset($form['_token']);
@@ -70,5 +70,11 @@ return view('author.binds', $data);
         Author::find($request->id)->delete();
         return redirect('/');
     }
+
+    public function verror()
+    {
+    return view('verror');
+    }
+
 
 }
