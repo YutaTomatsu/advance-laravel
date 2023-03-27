@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.default')
 <style>
 th {
   background-color: #289ADC;
