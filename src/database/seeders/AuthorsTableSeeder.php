@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Author;
+use Illuminate\Support\Facades\DB;
 
 class AuthorsTableSeeder extends Seeder
 {
@@ -38,5 +39,7 @@ class AuthorsTableSeeder extends Seeder
         'nationality' => 'Chinese'
     ];
     Author::create($param);
+
+    Author::factory()->count(3)->create();
     }
 }
